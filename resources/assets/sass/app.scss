@@ -1,0 +1,63 @@
+// Variables
+@import "variables";
+@import "reset";
+@import "lesshat";
+@import "general";
+@import "preload";
+@import "pagination";
+@import "overlay";
+@import "grid";
+@import "item";
+
+#page {
+    height: 100%;
+}
+
+body {
+    font-family: 'Gibson', sans-serif;
+    font-size: 1.4rem;
+    color: #444444;
+    background-color: #FAFAFA;
+}
+
+a {
+    color: #529ECC;
+}
+
+::-moz-selection,
+::selection {
+    color: #444444;
+    background-color: #FAFAFA;
+}
+
+::-moz-placeholder,
+::-webkit-input-placeholder {
+    color: #444444;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    -webkit-text-fill-color: #444444;
+}
+
+@import "main/header";
+@import "main/content";
+@import "main/footer";
+@import "responsive";
+
+body.index .item.photo .box .media[data-count] a[style]:not(:first-of-type) {
+    border-color: #fff;
+}
+
+#content,
+#footer .footer {
+    max-width: 1200px;
+}
+
+#header .header .content {
+    max-width: 1200px;
+
+    .navigation-holder.sticky .navigation .navigation-wrapper {
+        max-width: 1200px;
+    }
+}

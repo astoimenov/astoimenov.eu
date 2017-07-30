@@ -1,0 +1,282 @@
+body {
+    &.header-left #header .header .image,
+    &.header-right #header .header .image {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#header .header .image.in-background + .content .heading {
+    position: relative;
+    bottom: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    &.header-left #header .header .image + .content .heading,
+    &.header-right #header .header .image + .content .heading {
+        position: relative;
+        bottom: auto;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+body.permalink #header .header .content .navigation-holder .navigation.empty {
+    height: 2.5rem;
+}
+
+#header {
+    font-family: 'Gibson', sans-serif;
+    color: #444444;
+    background-color: rgba(250, 250, 250, 1);
+    border-bottom: 0 solid #529ECC;
+
+    .title a {
+        font-weight: bold;
+        color: #444444;
+    }
+
+    .header {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+
+        .image {
+            display: block;
+            max-height: 318px;
+            min-height: 178px;
+            font-size: 0;
+            line-height: 0;
+            background: transparent no-repeat left center;
+            background-position: center center;
+            background-position-y: 50%;
+            opacity: 1;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                visibility: hidden;
+            }
+
+            &.cover {
+                background-size: cover;
+            }
+
+            &.in-background {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .content {
+            position: relative;
+            margin: 0 auto;
+            padding: 0 2.5rem;
+
+            .heading {
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                width: 100%;
+                margin: 0 0 2.5rem;
+                padding: 0 2.5rem;
+
+                .avatar {
+                    max-width: 128px;
+                    background-position: center center;
+                }
+
+                .logo {
+                    background-position: center center;
+                }
+
+                .avatar,
+                .logo {
+                    display: inline-block;
+                    max-height: 128px;
+                    background: transparent no-repeat left center;
+                    background-size: contain;
+                    vertical-align: bottom;
+                }
+
+                .avatar img,
+                .logo img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    visibility: hidden;
+                }
+
+                .avatar.circle {
+                    border-radius: 50%;
+                }
+
+                .description {
+                    font-size: inherit;
+                    font-weight: 500;
+                    line-height: 2.5rem;
+                }
+
+                > * {
+                    margin-top: 2.5rem;
+                }
+            }
+
+            .navigation-holder .navigation {
+                text-transform: uppercase;
+
+                input {
+                    text-transform: uppercase;
+                }
+
+                .toggle {
+                    display: none;
+                    margin: 2.2rem 0;
+
+                    &.float {
+                        margin: 1.2rem 0;
+
+                        &:before {
+                            position: absolute;
+                            right: 0.5rem;
+                            top: -2rem;
+                            padding: 2rem;
+                        }
+                    }
+                }
+
+                .menu {
+                    font-size: inherit;
+                    display: inline-block;
+                    margin: 1.15rem 0;
+
+                    li {
+                        display: inline-block;
+                        margin: 1rem 0;
+
+                        &:not(:last-child) {
+                            margin: 1rem 2rem 1rem 0;
+                        }
+                    }
+
+                    .search-holder {
+                        display: none;
+                    }
+                }
+
+                &.empty {
+                    .menu,
+                    .toggle {
+                        display: none !important;
+                    }
+                }
+            }
+
+            .navigation-holder {
+                .navigation.search-right .menu .search-holder {
+                    float: right;
+                    margin: 1rem 0 1rem 2rem;
+                }
+
+                &:not(.sticky) {
+                    min-height: initial !important;
+                }
+            }
+        }
+    }
+
+    &.center .header .content .navigation-holder .navigation {
+        .toggle.float {
+            margin: 2.2rem 0;
+
+            &:before {
+                position: inherit;
+                right: auto;
+                top: auto;
+            }
+        }
+
+        .menu {
+            margin-left: -1rem;
+            margin-right: -1rem;
+
+            li {
+                margin: 1rem;
+            }
+        }
+
+        &.search-right .menu .search-holder {
+            margin: 1rem;
+        }
+    }
+
+    &.right .header .content .navigation-holder .navigation {
+        .toggle.float:before {
+            right: auto;
+            left: 0.5rem;
+        }
+
+        .menu {
+            li {
+                margin: 1rem 0;
+
+                &:not(:first-child) {
+                    margin: 1rem 0 1rem 2rem;
+                }
+            }
+
+            .search-holder {
+                margin: 1rem 2rem 1rem 0;
+
+                + li {
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        &.search-right .menu .search-holder {
+            margin: 1rem 0 1rem 2rem;
+
+            + li {
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+body.index #header.full {
+    height: 100%;
+
+    .header {
+        height: 100%;
+
+        &:before {
+            display: inline-block;
+            height: 100%;
+            margin-right: -.3em;
+            vertical-align: middle;
+            content: '';
+        }
+
+        .image {
+            max-height: initial;
+        }
+
+        .content {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+@media screen and (min-width: 500px) {
+    #header .header .content .navigation-holder.sticky .navigation {
+        background-color: #FAFAFA;
+    }
+}

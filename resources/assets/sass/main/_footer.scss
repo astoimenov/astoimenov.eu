@@ -1,0 +1,37 @@
+#footer {
+    color: #444444;
+    border-top: 1px solid rgba(82, 158, 204, 0.1);
+    position: relative;
+
+    a {
+        color: #529ECC;
+    }
+
+    .footer {
+        margin: 0 auto;
+        padding: 0.5rem 1.75rem;
+        text-align: center;
+
+        .copyright {
+            margin: 2rem 0.75rem;
+        }
+
+        .links {
+            margin: 2rem 0.75rem;
+            font-size: 0;
+
+            li {
+                display: inline-block;
+
+                &:not(:last-child) {
+                    margin: 0 0.75rem 0 0;
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 0.715em;
+            line-height: 1.7rem;
+        }
+    }
+}

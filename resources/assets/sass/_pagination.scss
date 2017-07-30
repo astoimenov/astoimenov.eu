@@ -1,0 +1,118 @@
+.pagination {
+    position: relative;
+    text-align: center;
+    font-size: 0.855em;
+    text-transform: uppercase;
+}
+
+.pagination a {
+    display: inline-block;
+    height: 32px;
+    line-height: 3rem;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.pagination a .genericon {
+    font-size: 2rem;
+    line-height: inherit;
+}
+
+.pagination a.current {
+    border-color: initial;
+}
+
+.pagination .pages {
+    padding-top: 4rem;
+}
+
+.pagination .pages a {
+    width: 32px;
+}
+
+.pagination .days a,
+.pagination .posts a {
+    margin: 0 2rem;
+}
+
+.pagination .loader {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -4px 0 0 -8px;
+    outline: 0;
+    border: 2px solid;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 20%;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: top 0.2s ease, border-width 0.2s ease, -webkit-border-radius 0.2s ease;
+    -moz-transition: top 0.2s ease, border-width 0.2s ease, border-radius 0.2s ease;
+    -o-transition: top 0.2s ease, border-width 0.2s ease, border-radius 0.2s ease;
+    transition: top 0.2s ease, border-width 0.2s ease, border-radius 0.2s ease;
+}
+
+.pagination .loader:after {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    margin: 8px 0 0 -168px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    font-size: 1.1rem;
+    opacity: 0;
+    content: attr(data-text);
+}
+
+.pagination .loader:hover {
+    top: 3px;
+}
+
+.pagination .loader:hover:after {
+    opacity: 0.7;
+}
+
+.pagination .loader.loaded:after,
+.pagination .loader.loading:after {
+    display: none;
+}
+
+.pagination .loader.loading {
+    margin: 0 0 0 -8px;
+    border-width: 1px;
+    border-color: initial;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spin 0.8s infinite ease;
+    -moz-animation: spin 0.8s infinite ease;
+    -o-animation: spin 0.8s infinite ease;
+    animation: spin 0.8s infinite ease;
+}
+
+.pagination .loader.loading:hover {
+    top: 0;
+}
+
+.pagination .loader.loaded {
+    margin: 4px 0 0 -8px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.pagination .loader.loaded:hover {
+    top: -3px;
+}

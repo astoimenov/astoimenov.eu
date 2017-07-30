@@ -1,0 +1,45 @@
+.genericon {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+}
+
+.grid {
+    position: relative;
+    margin: 0;
+}
+
+.grid:after,
+.grid:before {
+    display: table;
+    line-height: 0;
+    content: '';
+}
+
+.grid:after {
+    clear: both;
+}
+
+.grid > .item {
+    float: left;
+    display: block;
+    position: relative;
+    min-height: 1px;
+    padding: 0;
+}
+
+.grid > .item,
+.grid > .item-sizer {
+    width: 100%;
+}
+
+.grid.cs-1 > [class^=item] {
+    width: 100%;
+}
+
+.grid {
+    margin: -12px;
+
+    > .item {
+        padding: 12px;
+    }
+}

@@ -1,0 +1,586 @@
+.item .box {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.item .box .body,
+.item .box .caption,
+.item .box .media,
+.item .box .title {
+    word-break: break-word;
+}
+
+.item .box .body embed,
+.item .box .body iframe,
+.item .box .body img,
+.item .box .caption embed,
+.item .box .caption iframe,
+.item .box .caption img,
+.item .box .media embed,
+.item .box .media iframe,
+.item .box .media img,
+.item .box .title embed,
+.item .box .title iframe,
+.item .box .title img {
+    display: block;
+    width: 100%;
+}
+
+.item .box .body img,
+.item .box .caption img,
+.item .box .media img,
+.item .box .title img {
+    height: auto;
+}
+
+.item .box .body .answer_form_container,
+.item .box .caption .answer_form_container,
+.item .box .media .answer_form_container,
+.item .box .title .answer_form_container {
+    line-height: 0;
+}
+
+.item .box .media {
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
+.item .box .media a {
+    display: block;
+}
+
+.item .box .media a:hover {
+    opacity: 1;
+}
+
+.item .box .media .click-through {
+    position: absolute;
+    bottom: 22px;
+    right: 22px;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #fff;
+    background: #000;
+    border-radius: 50%;
+    padding: 1px 0 0 1px;
+    height: 22px;
+    width: 22px;
+}
+
+.item .box .media .click-through:hover {
+    opacity: 0.7;
+}
+
+.item .box .media .tumblr_video_container {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item .box .body,
+.item .box .caption,
+.item .box .title {
+    padding: 2.5rem;
+    line-height: 2rem;
+}
+
+.item .box .body~.body,
+.item .box .body~.meta,
+.item .box .caption~.body,
+.item .box .caption~.meta,
+.item .box .title~.body,
+.item .box .title~.meta {
+    padding: 0 2.5rem 2.5rem;
+}
+
+.item .box .body h1,
+.item .box .caption h1 {
+    font-size: 1.285em;
+}
+
+.item .box .body blockquote,
+.item .box .caption blockquote {
+    padding-left: 1.5rem;
+    border-left: 1px solid;
+}
+
+.item .box .body .line:not(:first-child),
+.item .box .body blockquote:not(:first-child),
+.item .box .body div:not(:first-child),
+.item .box .body figure:not(:first-child),
+.item .box .body h1:not(:first-child),
+.item .box .body h2:not(:first-child),
+.item .box .body h3:not(:first-child),
+.item .box .body h4:not(:first-child),
+.item .box .body h5:not(:first-child),
+.item .box .body h6:not(:first-child),
+.item .box .body p:not(:first-child),
+.item .box .body ul:not(:first-child),
+.item .box .caption .line:not(:first-child),
+.item .box .caption blockquote:not(:first-child),
+.item .box .caption div:not(:first-child),
+.item .box .caption figure:not(:first-child),
+.item .box .caption h1:not(:first-child),
+.item .box .caption h2:not(:first-child),
+.item .box .caption h3:not(:first-child),
+.item .box .caption h4:not(:first-child),
+.item .box .caption h5:not(:first-child),
+.item .box .caption h6:not(:first-child),
+.item .box .caption p:not(:first-child),
+.item .box .caption ul:not(:first-child) {
+    margin-top: 1.5rem;
+}
+
+.item .box .body a,
+.item .box .caption a {
+    text-decoration: underline;
+}
+
+.item .box .meta {
+    padding: 2.5rem;
+    font-size: 0.715em;
+    text-transform: uppercase;
+}
+
+.item .box .meta .origin li,
+.item .box .meta .tags li {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.item .box .meta .origin li:not(:last-child),
+.item .box .meta .tags li:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.item .box .meta .origin.hide,
+.item .box .meta .tags.hide {
+    display: none;
+}
+
+.item .box .meta .tags {
+    margin-bottom: 1rem;
+}
+
+.item .box .meta .tags a:before {
+    content: '#';
+}
+
+.item .box .meta .origin .reblogged-from svg {
+    margin-right: 0.25rem;
+    vertical-align: text-bottom;
+}
+
+.item .box .meta .origin .source img {
+    vertical-align: text-bottom;
+}
+
+.item .box .meta .actions {
+    text-align: right;
+    line-height: 0;
+}
+
+.item .box .meta .actions li {
+    display: inline-block;
+}
+
+.item .box .meta .actions li:not(:first-child) {
+    margin-left: 0.75rem;
+}
+
+.item .box .meta .actions li:not(:last-child) {
+    margin-right: 0;
+}
+
+.item .box .meta .actions .info {
+    float: left;
+    line-height: initial;
+    max-width: 70%;
+    text-align: left;
+}
+
+.item .box .meta .actions .info > * {
+    vertical-align: middle;
+}
+
+.item .box .meta .actions .like,
+.item .box .meta .actions .reblog {
+    position: relative;
+}
+
+.item .box .meta .actions .like > *,
+.item .box .meta .actions .reblog > * {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+
+.item .box .meta .actions .like svg {
+    pointer-events: none;
+}
+
+.item .box .meta .actions .like .like_button {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.item .box .meta .actions .like .like_button:hover+svg {
+    opacity: 0.7;
+}
+
+.item .box .meta .actions .like .like_button.liked {
+    opacity: 1;
+}
+
+.item .box .meta .actions .like .like_button.liked+svg {
+    opacity: 0;
+}
+
+.item .box .meta .actions .like .like_button.liked:hover {
+    opacity: 0.7;
+}
+
+.item .notes {
+    margin: 2.5rem 2.5rem 0;
+    font-size: 0.715em;
+    text-transform: uppercase;
+}
+
+.item .notes li {
+    padding-left: 2rem;
+}
+
+.item .notes li+li {
+    margin-top: 0.5rem;
+}
+
+.item .notes .avatar {
+    width: 15px;
+    height: 15px;
+    margin: 0 0.5rem 0 -2rem;
+    vertical-align: text-bottom;
+}
+
+.item .notes .more_notes_link_container {
+    margin-top: 2.5rem;
+    padding: 0;
+}
+
+.item .comments {
+    margin: 2.5rem 2.5rem 0;
+}
+
+.item.answer .body,
+.item.answer .caption,
+.item.audio .body,
+.item.audio .caption,
+.item.link .body,
+.item.link .caption,
+.item.photo .body,
+.item.photo .caption,
+.item.quote .body,
+.item.quote .caption,
+.item.text .body,
+.item.text .caption,
+.item.video .body,
+.item.video .caption {
+    padding: 2.5rem;
+    line-height: 2rem;
+}
+
+.item.answer .body ol,
+.item.answer .body ul,
+.item.answer .caption ol,
+.item.answer .caption ul,
+.item.audio .body ol,
+.item.audio .body ul,
+.item.audio .caption ol,
+.item.audio .caption ul,
+.item.link .body ol,
+.item.link .body ul,
+.item.link .caption ol,
+.item.link .caption ul,
+.item.photo .body ol,
+.item.photo .body ul,
+.item.photo .caption ol,
+.item.photo .caption ul,
+.item.quote .body ol,
+.item.quote .body ul,
+.item.quote .caption ol,
+.item.quote .caption ul,
+.item.text .body ol,
+.item.text .body ul,
+.item.text .caption ol,
+.item.text .caption ul,
+.item.video .body ol,
+.item.video .body ul,
+.item.video .caption ol,
+.item.video .caption ul {
+    list-style: initial;
+}
+
+.item.answer .body ol li,
+.item.answer .body ul li,
+.item.answer .caption ol li,
+.item.answer .caption ul li,
+.item.audio .body ol li,
+.item.audio .body ul li,
+.item.audio .caption ol li,
+.item.audio .caption ul li,
+.item.link .body ol li,
+.item.link .body ul li,
+.item.link .caption ol li,
+.item.link .caption ul li,
+.item.photo .body ol li,
+.item.photo .body ul li,
+.item.photo .caption ol li,
+.item.photo .caption ul li,
+.item.quote .body ol li,
+.item.quote .body ul li,
+.item.quote .caption ol li,
+.item.quote .caption ul li,
+.item.text .body ol li,
+.item.text .body ul li,
+.item.text .caption ol li,
+.item.text .caption ul li,
+.item.video .body ol li,
+.item.video .body ul li,
+.item.video .caption ol li,
+.item.video .caption ul li {
+    margin-left: 1.75rem;
+}
+
+.item.answer .body ol li+li,
+.item.answer .body ul li+li,
+.item.answer .caption ol li+li,
+.item.answer .caption ul li+li,
+.item.audio .body ol li+li,
+.item.audio .body ul li+li,
+.item.audio .caption ol li+li,
+.item.audio .caption ul li+li,
+.item.link .body ol li+li,
+.item.link .body ul li+li,
+.item.link .caption ol li+li,
+.item.link .caption ul li+li,
+.item.photo .body ol li+li,
+.item.photo .body ul li+li,
+.item.photo .caption ol li+li,
+.item.photo .caption ul li+li,
+.item.quote .body ol li+li,
+.item.quote .body ul li+li,
+.item.quote .caption ol li+li,
+.item.quote .caption ul li+li,
+.item.text .body ol li+li,
+.item.text .body ul li+li,
+.item.text .caption ol li+li,
+.item.text .caption ul li+li,
+.item.video .body ol li+li,
+.item.video .body ul li+li,
+.item.video .caption ol li+li,
+.item.video .caption ul li+li {
+    margin-top: 0.25rem;
+}
+
+.item.answer .box .body .answer,
+.item.answer .box .body .replies {
+    padding-top: 1.5rem;
+    border-top: 1px dashed;
+}
+
+body.index .item.photo .box .media[data-count] {
+    margin: -1px;
+}
+
+body.index .item.photo .box .media[data-count] a {
+    float: left;
+    width: 100%;
+}
+
+body.index .item.photo .box .media[data-count] a img {
+    padding: 1px;
+}
+
+body.index .item.photo .box .media[data-count] a[style]:first-child {
+    background-image: none!important;
+}
+
+body.index .item.photo .box .media[data-count] a[style]+a {
+    height: 100px;
+    background: transparent no-repeat center center;
+    background-size: cover;
+    border: 1px solid;
+}
+
+body.index .item.photo .box .media[data-count] a[style]+a img {
+    max-width: 100%;
+    max-height: 100%;
+    visibility: hidden;
+}
+
+body.index .item.photo .box .media[data-count="3"] a:nth-child(n+2) {
+    width: 50%;
+}
+
+body.index .item.photo .box .media[data-count="4"] a:nth-child(n+2) {
+    width: 33.33333%;
+}
+
+body.index .item.photo .box .media[data-count="5"] a:nth-child(n+2) {
+    width: 50%;
+}
+
+body.index .item.photo .box .media[data-count="6"] a:nth-child(n+2):not(:nth-child(n+4)) {
+    width: 50%;
+}
+
+body.index .item.photo .box .media[data-count="6"] a:nth-child(n+4) {
+    width: 33.33333%;
+}
+
+body.index .item.photo .box .media[data-count="7"] a:nth-child(n+2) {
+    width: 33.33333%;
+}
+
+body.index .item.photo .box .media[data-count="8"] a:nth-child(n+2):not(:nth-child(n+6)) {
+    width: 50%;
+}
+
+body.index .item.photo .box .media[data-count="8"] a:nth-child(n+6) {
+    width: 33.33333%;
+}
+
+body.index .item.photo .box .media[data-count="9"] a:nth-child(n+2):not(:nth-child(n+4)) {
+    width: 50%;
+}
+
+body.index .item.photo .box .media[data-count="9"] a:nth-child(n+4) {
+    width: 33.33333%;
+}
+
+body.index .item.photo .box .media[data-count="10"] a:nth-child(n+2) {
+    width: 33.33333%;
+}
+
+body.index .item.photo .box.minimal-on-mobile .body,
+body.index .item.photo .box.minimal-on-mobile .caption,
+body.index .item.photo .box.minimal-on-mobile .meta,
+body.index .item.photo .box.minimal-on-mobile .title {
+    display: none;
+}
+
+body.permalink .item.photo .box .media[data-count] a:not(:first-child) {
+    margin-top: 2px;
+}
+
+.item.quote .box .body blockquote {
+    position: relative;
+    padding: 0 0 0 1.25rem;
+    border: none;
+    font-family: Georgia, Times, serif;
+    font-size: 1.425em;
+    line-height: 2.8rem;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+    word-break: break-word;
+}
+
+.item.quote .box .body blockquote:before {
+    position: absolute;
+    left: 0;
+    content: open-quote;
+}
+
+.item.quote .box .body blockquote:after {
+    margin-left: 0.25em;
+    content: close-quote;
+}
+
+.item.quote .box .body blockquote * {
+    display: inline;
+}
+
+.item.quote .box .body .source {
+    font-size: 0.715em;
+    text-transform: uppercase;
+}
+
+.item.quote .box .body .source:before {
+    padding-right: 0.5rem;
+    content: '\2014';
+}
+
+.item.link .box .title a:after {
+    padding-left: 0.5rem;
+    content: '\2192';
+}
+
+.item.chat .box .body {
+    font-family: Courier, monospace;
+}
+
+.item.chat .box .body .line .label {
+    font-weight: 700;
+}
+
+.item.audio .box .media,
+.item.video .box .media {
+    height: 240px;
+}
+
+.item.audio .box .media embed,
+.item.audio .box .media iframe,
+.item.video .box .media embed,
+.item.video .box .media iframe {
+    height: 100%;
+}
+
+body.permalink .item.audio .box .media,
+body.permalink .item.video .box .media {
+    height: 440px;
+}
+
+.item {
+    .box {
+        background-color: rgba(255, 255, 255, 1);
+
+        .media .click-through {
+            color: #fff;
+            background-color: #529ECC;
+        }
+
+        .body blockquote,
+        .caption blockquote {
+            border-color: rgba(82, 158, 204, 0.7);
+        }
+    }
+
+    &.answer .box .body {
+        .answer,
+        .replies {
+            border-color: rgba(82, 158, 204, 0.7);
+        }
+    }
+
+    .box .meta {
+        .actions {
+            .like svg,
+            .reblog svg {
+                fill: #529ECC;
+            }
+        }
+
+        .origin .reblogged-from svg {
+            fill: #529ECC;
+        }
+    }
+}

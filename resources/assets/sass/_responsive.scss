@@ -1,0 +1,378 @@
+@media screen and (max-width: 500px) {
+    #header {
+        margin-bottom: 2px;
+
+        .header .image.in-background {
+            max-height: none;
+        }
+    }
+
+    body {
+        &.header-left #header .header .image,
+        &.header-right #header .header .image {
+            max-height: none;
+        }
+    }
+
+    #header .header .content {
+        .heading .description {
+            display: none;
+        }
+
+        .navigation-holder .navigation {
+            .toggle {
+                display: inline-block;
+            }
+
+            .menu {
+                display: none;
+
+                li {
+                    display: block;
+                    margin-top: 2rem !important;
+                    margin-bottom: 2rem !important;
+                }
+            }
+
+            &.expand {
+                .toggle:before {
+                    content: '\f406';
+                }
+
+                .menu {
+                    display: block;
+                    margin: -2.2rem 0 2rem;
+                }
+            }
+        }
+    }
+
+    #content .items.full-on-mobile {
+        margin: 0;
+
+        .grid {
+            margin: 0;
+
+            > .item {
+                padding: 0;
+
+                &:not(:first-of-type) {
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+
+    #footer {
+        position: relative;
+        margin-top: 2px;
+    }
+}
+@media screen and (min-width: 500px) {
+    #header .header .content .navigation-holder {
+        .navigation .menu .search-holder {
+            display: inline-block;
+        }
+
+        &.sticky .navigation {
+            z-index: 999999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            -webkit-transition: background-color 0.1s ease;
+            -moz-transition: background-color 0.1s ease;
+            -o-transition: background-color 0.1s ease;
+            transition: background-color 0.1s ease;
+
+            .navigation-wrapper {
+                margin: 0 auto;
+
+                .menu {
+                    padding: 0 2.5rem;
+                }
+            }
+        }
+    }
+
+    #footer .footer {
+        opacity: 0.5;
+        -webkit-transition: opacity 0.2s ease;
+        -moz-transition: opacity 0.2s ease;
+        -o-transition: opacity 0.2s ease;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+@media screen and (min-width: 550px) {
+    .grid {
+        &.cs-2 > [class^=item],
+        &.cs-3 > [class^=item],
+        &.cs-4 > [class^=item],
+        &.cs-5 > [class^=item] {
+            width: 50%;
+        }
+    }
+}
+@media screen and (min-width: 860px) {
+    body {
+        &.header-left {
+            #footer,
+            #header {
+                z-index: 1;
+                position: fixed;
+                width: 240px;
+            }
+        }
+
+        &.header-right {
+            #footer,
+            #header {
+                z-index: 1;
+                position: fixed;
+                width: 240px;
+            }
+        }
+
+        &.header-left #header,
+        &.header-right #header {
+            top: 0;
+            height: 100%;
+        }
+
+        &.header-left #header .header,
+        &.header-right #header .header {
+            height: 100%;
+        }
+
+        &.header-left #header .header .image,
+        &.header-right #header .header .image {
+            min-height: 100%;
+        }
+
+        &.header-left #header .header .content .navigation-holder .navigation .menu li,
+        &.header-right #header .header .content .navigation-holder .navigation .menu li {
+            display: block;
+        }
+
+        &.header-left #footer,
+        &.header-right #footer {
+            bottom: 0;
+            border: none;
+        }
+
+        &.header-left #footer.left .footer,
+        &.header-right #footer.left .footer {
+            text-align: left;
+        }
+
+        &.header-left #footer.right .footer,
+        &.header-right #footer.right .footer {
+            text-align: right;
+        }
+
+        &.header-left {
+            #footer,
+            #header {
+                left: 0;
+            }
+
+            #content {
+                margin: 0 0 0 240px;
+            }
+        }
+
+        &.header-right {
+            #footer,
+            #header {
+                right: 0;
+            }
+
+            #content {
+                margin: 0 240px 0 auto;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1000px) {
+    .grid {
+        &.cs-3 > [class^=item],
+        &.cs-4 > [class^=item],
+        &.cs-5 > [class^=item] {
+            width: 33.33333%;
+        }
+    }
+
+    body.index {
+        .grayscale {
+            .media {
+                -webkit-filter: grayscale(1);
+                -moz-filter: grayscale(1);
+                -ms-filter: grayscale(1);
+                filter: grayscale(1);
+                -webkit-transition: -webkit-filter 0.2s ease;
+                -moz-transition: -moz-filter 0.2s ease;
+                -o-transition: filter 0.2s ease;
+                transition: -webkit-filter 0.2s ease, -moz-filter 0.2s ease, -o-filter 0.2s ease, filter 0.2s ease;
+            }
+
+            &:hover .media {
+                -webkit-filter: none;
+                -moz-filter: none;
+                -ms-filter: none;
+                filter: none;
+            }
+        }
+
+        .item {
+            .box {
+                .media .click-through {
+                    opacity: 0.3;
+                    -webkit-transition: opacity 0.2s ease;
+                    -moz-transition: opacity 0.2s ease;
+                    -o-transition: opacity 0.2s ease;
+                    transition: opacity 0.2s ease;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                &.meta-faded .meta {
+                    opacity: 0.5;
+                    -webkit-transition: opacity 0.2s ease;
+                    -moz-transition: opacity 0.2s ease;
+                    -o-transition: opacity 0.2s ease;
+                    transition: opacity 0.2s ease;
+                }
+
+                &:hover {
+                    .click-through,
+                    .meta {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &.photo .box {
+                &.minimal {
+                    .body,
+                    .caption,
+                    .meta,
+                    .title {
+                        display: none;
+                    }
+                }
+
+                &.meta-overlay {
+                    .media .click-through {
+                        top: 22px;
+                        bottom: auto;
+                    }
+
+                    .body,
+                    .caption,
+                    .title {
+                        display: none;
+                    }
+
+                    .meta {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        padding-top: 120px;
+                        padding-bottom: 2rem;
+                        opacity: 0;
+                        pointer-events: none;
+                        -webkit-transition: opacity 0.2s ease, padding-bottom 0.2s ease;
+                        -moz-transition: opacity 0.2s ease, padding-bottom 0.2s ease;
+                        -o-transition: opacity 0.2s ease, padding-bottom 0.2s ease;
+                        transition: opacity 0.2s ease, padding-bottom 0.2s ease;
+                        -webkit-box-shadow: inset 0 -160px 40px -40px rgba(255, 255, 255, 0.9);
+                        -moz-box-shadow: inset 0 -160px 40px -40px rgba(255, 255, 255, 0.9);
+                        box-shadow: inset 0 -160px 40px -40px rgba(255, 255, 255, 0.9);
+
+                        > * {
+                            pointer-events: all;
+                        }
+                    }
+
+                    &:hover .meta {
+                        padding-bottom: 2.5rem;
+                        opacity: 1;
+                    }
+                }
+
+                &.photoset-stacked {
+                    .media[data-count] a {
+                        float: none;
+                        width: 100%;
+
+                        + a {
+                            height: auto;
+                            border: none;
+
+                            img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                opacity: 0;
+                                visibility: visible;
+                                transition: opacity 0.3s ease;
+                            }
+
+                            &[style] {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                opacity: 0;
+                                visibility: visible;
+                                transition: opacity 0.3s ease;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                    &:hover .media[data-count] a:nth-child(2) {
+                        img {
+                            opacity: 1;
+                        }
+
+                        &[style] {
+                            opacity: 1;
+
+                            img {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .grid {
+        &.cs-4 > [class^=item],
+        &.cs-5 > [class^=item] {
+            width: 25%;
+        }
+    }
+}
+@media screen and (min-width: 1400px) {
+    .grid.cs-5 > [class^=item] {
+        width: 20%;
+    }
+}
+@media screen and (min-width: 1000px) {
+    body.index .item.photo .box.meta-overlay .meta {
+        -webkit-box-shadow: inset 0 -160px 40px -40px rgba(255, 255, 255, 0.9);
+        -moz-box-shadow: inset 0 -160px 40px -40px rgba(255, 255, 255, 0.9);
+        box-shadow: inset 0 -160px 40px -40px rgba(255, 255, 255, 0.9);
+    }
+}
